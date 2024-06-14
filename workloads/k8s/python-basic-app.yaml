@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://lusoal.github.io/helm-charts-examples/'
-    chart: 'python-application-chart'
-    targetRevision: '0.1.0'
+    repoURL: "https://ande28em.github.io/helm-charts-examples/"
+    chart: "python-application-chart"
+    targetRevision: "0.1.0"
     helm:
       values: |
         name: python-basic-app

@@ -10,7 +10,7 @@ spec:
   arguments:
     parameters:
       - name: REPO_URL
-        value: "https://github.com/lusoal/terraform-examples"
+        value: "https://github.com/ande28em/terraform-examples"
       - name: GIT_BRANCH
         value: "main"
       - name: ARTIFACT_BUCKET
@@ -49,10 +49,13 @@ spec:
       container:
         image: "397284317422.dkr.ecr.us-east-1.amazonaws.com/argo-workflows-internal:1"
         command: ["/bin/sh", "-c"]
-        args: ["./01-clone-repository.sh '{{inputs.parameters.REPO_URL}}' '{{inputs.parameters.GIT_BRANCH}}'"]
+        args:
+          [
+            "./01-clone-repository.sh '{{inputs.parameters.REPO_URL}}' '{{inputs.parameters.GIT_BRANCH}}'",
+          ]
         volumeMounts:
-        - name: workdir
-          mountPath: /mnt/vol 
+          - name: workdir
+            mountPath: /mnt/vol
     - name: create-infrastructure
       inputs:
         parameters:
@@ -63,10 +66,13 @@ spec:
       container:
         image: "397284317422.dkr.ecr.us-east-1.amazonaws.com/argo-workflows-internal:1"
         command: ["/bin/sh", "-c"]
-        args: ["./02-apply-terraform.sh '{{inputs.parameters.APPLICATION_NAME}}' '{{inputs.parameters.ROLE_NAME}}' '{{inputs.parameters.BUCKET_NAME}}' '{{inputs.parameters.ARTIFACT_BUCKET}}'"]
+        args:
+          [
+            "./02-apply-terraform.sh '{{inputs.parameters.APPLICATION_NAME}}' '{{inputs.parameters.ROLE_NAME}}' '{{inputs.parameters.BUCKET_NAME}}' '{{inputs.parameters.ARTIFACT_BUCKET}}'",
+          ]
         volumeMounts:
-        - name: workdir
-          mountPath: /mnt/vol
+          - name: workdir
+            mountPath: /mnt/vol
   volumeClaimTemplates:
     - metadata:
         name: workdir
