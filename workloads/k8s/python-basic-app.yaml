@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: "https://github.com/ande28em/helm-charts-examples"
+    repoURL: "https://github.com/ande28em/helm-charts-examples/"
     chart: "python-application-chart"
     targetRevision: "0.1.0"
     helm:
