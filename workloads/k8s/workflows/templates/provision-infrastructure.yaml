@@ -14,7 +14,7 @@ spec:
       - name: GIT_BRANCH
         value: "main"
       - name: ARTIFACT_BUCKET
-        value: "getting-started20240611185034473200000001"
+        value: "getting-started20240614141523730600000005"
       - name: APPLICATION_NAME
       - name: ROLE_NAME
       - name: BUCKET_NAME
@@ -47,7 +47,7 @@ spec:
           - name: REPO_URL
           - name: GIT_BRANCH
       container:
-        image: "397284317422.dkr.ecr.us-east-1.amazonaws.com/argo-workflows-internal:1"
+        image: "872646166659.dkr.ecr.us-west-2.amazonaws.com/argo-workflows-internal:1"
         command: ["/bin/sh", "-c"]
         args:
           [
@@ -64,7 +64,7 @@ spec:
           - name: BUCKET_NAME
           - name: ARTIFACT_BUCKET
       container:
-        image: "397284317422.dkr.ecr.us-east-1.amazonaws.com/argo-workflows-internal:1"
+        image: "872646166659.dkr.ecr.us-west-2.amazonaws.com/argo-workflows-internal:1"
         command: ["/bin/sh", "-c"]
         args:
           [
