@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: python-basic-app
+  name: anycompany-app
   namespace: argocd
 spec:
   project: default
@@ -11,25 +11,25 @@ spec:
     targetRevision: "0.1.0"
     helm:
       values: |
-        name: python-basic-app
-        namespace: python-basic-app
+        name: anycompany-app
+        namespace: anycompany-app
         replicaCount: 1
         image:
-          repository: 397284317422.dkr.ecr.us-east-1.amazonaws.com/python-basic-app
+          repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app
           tag: "1"
           pullPolicy: IfNotPresent
         service:
           type: ClusterIP
           port: 80
         env:
-          S3_BUCKET_NAME: 'python-basic-app-bucket-shkakdas'
+          S3_BUCKET_NAME: 'anycompany-app-bucket'
         serviceAccount:
           create: true
-          name: python-basic-app
-          iamRoleArn: 'arn:aws:iam::397284317422:role/python-basic-app-role'
+          name: anycompany-app
+          iamRoleArn: 'arn:aws:iam::872646166659:role/anycompany-app-role'
   destination:
     name: "in-cluster"
-    namespace: python-basic-app
+    namespace: anycompany-app
   syncPolicy:
     automated:
       prune: true
