@@ -16,7 +16,7 @@ spec:
         replicaCount: 1
         image:
           repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app
-          tag: "1"
+          tag: "latest"
           pullPolicy: IfNotPresent
         service:
           type: ClusterIP
