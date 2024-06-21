@@ -30,7 +30,7 @@ spec:
           iamRoleArn: 'arn:aws:iam::872646166659:role/anycompany-app-role'
   destination:
     name: "in-cluster"
-    namespace: anycompany-app
+    namespace: anycompany-app-1
   syncPolicy:
     automated:
       prune: true
