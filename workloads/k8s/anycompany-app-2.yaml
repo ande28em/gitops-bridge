@@ -15,7 +15,7 @@ spec:
         namespace: anycompany-app
         replicaCount: 1
         image:
-          repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app-2:latest
+          repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app-2
           tag: "latest"
           pullPolicy: IfNotPresent
         service:
