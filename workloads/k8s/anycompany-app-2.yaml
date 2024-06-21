@@ -11,7 +11,7 @@ spec:
     targetRevision: "0.1.2"
     helm:
       values: |
-        name: anycompany-app
+        name: anycompany-app-2
         namespace: anycompany-app
         replicaCount: 1
         image:
