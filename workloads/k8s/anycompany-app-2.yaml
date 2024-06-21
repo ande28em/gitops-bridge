@@ -12,7 +12,7 @@ spec:
     helm:
       values: |
         name: anycompany-app-2
-        namespace: anycompany-app
+        namespace: anycompany-app-2
         replicaCount: 1
         image:
           repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app-2
