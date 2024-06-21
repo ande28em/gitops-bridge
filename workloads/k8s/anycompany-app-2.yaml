@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: anycompany-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: "https://ande28em.github.io/helm-charts-examples/"
+    chart: "python-application-chart"
+    targetRevision: "0.1.2"
+    helm:
+      values: |
+        name: anycompany-app
+        namespace: anycompany-app
+        replicaCount: 1
+        image:
+          repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app-2:latest
+          tag: "latest"
+          pullPolicy: IfNotPresent
+        service:
+          type: LoadBalancer
+          port: 80
+          schema: internet-facing
+        env:
+          S3_BUCKET_NAME: 'anycompany-app-bucket'
+        serviceAccount:
+          create: true
+          name: anycompany-app
+          iamRoleArn: 'arn:aws:iam::872646166659:role/anycompany-app-role'
+  destination:
+    name: "in-cluster"
+    namespace: anycompany-app
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
