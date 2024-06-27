@@ -37,13 +37,14 @@ metadata:
   name: default
 spec:
   amiFamily: AL2
-  role: karpenter-getting-started-202406141425173257000000
+  role: karpenter-getting-started-20240614142517325700000016
   securityGroupSelectorTerms:
     - tags:
-        alpha.eksctl.io/cluster-name: getting-started
+        kubernetes.io/cluster/getting-started: owned
   subnetSelectorTerms:
     - tags:
-        alpha.eksctl.io/cluster-name: getting-started
+        kubernetes.io/role/internal-elb: 1
   tags:
+    Name: KarpenterManagedInstance
     intent: apps
     managed-by: karpenter
