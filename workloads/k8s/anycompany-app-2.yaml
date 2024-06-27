@@ -8,14 +8,12 @@ spec:
   source:
     repoURL: "https://ande28em.github.io/helm-charts-examples/"
     chart: "python-application-chart"
-    targetRevision: "0.1.4"
+    targetRevision: "0.1.5"
     helm:
       values: |
         name: anycompany-app-2
         namespace: anycompany-app-2
         replicaCount: 1
-        nodeSelector:
-          team: anycompany-infra-team
         image:
           repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app-2
           tag: "latest"
