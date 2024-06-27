@@ -43,7 +43,7 @@ spec:
         kubernetes.io/cluster/getting-started: owned
   subnetSelectorTerms:
     - tags:
-        kubernetes.io/role/internal-elb: 1
+        kubernetes.io/role/internal-elb: "1"
   tags:
     Name: KarpenterManagedInstance
     intent: apps
