@@ -13,6 +13,8 @@ spec:
       values: |
         name: anycompany-app-1
         namespace: anycompany-app-1
+        nodeSelector:
+          team: anycompany-infra-team
         replicaCount: 1
         image:
           repository: 872646166659.dkr.ecr.us-west-2.amazonaws.com/anycompany-app
