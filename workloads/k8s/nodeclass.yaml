@@ -39,8 +39,7 @@ spec:
   amiFamily: AL2
   role: karpenter-getting-started-20240614142517325700000016
   securityGroupSelectorTerms:
-    - tags:
-        kubernetes.io/cluster/getting-started: owned
+    - id: sg-0f0974d00c13ef0f7
   subnetSelectorTerms:
     - tags:
         kubernetes.io/role/internal-elb: "1"
