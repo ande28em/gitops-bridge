@@ -40,10 +40,10 @@ spec:
   role: karpenter-getting-started-20240614142517325700000016
   securityGroupSelectorTerms:
     - tags:
-        karpenter.sh/discovery: ex-karpenter
+        karpenter.sh/discovery: getting-started
   subnetSelectorTerms:
     - tags:
-        karpenter.sh/discovery: ex-karpenter
+        karpenter.sh/discovery: getting-started
   tags:
     Name: KarpenterManagedInstance
     intent: apps
