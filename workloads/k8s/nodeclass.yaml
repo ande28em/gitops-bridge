@@ -46,5 +46,6 @@ spec:
         karpenter.sh/discovery: getting-started
   tags:
     Name: KarpenterManagedInstance
+    karpenter.sh/discovery: getting-started
     intent: apps
     managed-by: karpenter
