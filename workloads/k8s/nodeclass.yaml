@@ -37,7 +37,7 @@ metadata:
   name: default
 spec:
   amiFamily: AL2
-  role: karpenter-20240627214116476700000025
+  role: karpenter-getting-started-20240627214045283300000016
   securityGroupSelectorTerms:
     - tags:
         karpenter.sh/discovery: getting-started
