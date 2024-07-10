@@ -10,7 +10,7 @@ metadata:
   namespace: game-2048
   name: game-2048
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app.kubernetes.io/name: game-2048
