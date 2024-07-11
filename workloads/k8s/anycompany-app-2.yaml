@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: "https://ande28em.github.io/helm-charts-examples/"
     chart: "python-application-chart"
-    targetRevision: "0.1.2"
+    targetRevision: "0.1.5"
     helm:
       values: |
         name: anycompany-app-2
