@@ -20,6 +20,10 @@ spec:
         - key: karpenter.k8s.aws/instance-category
           operator: In
           values: ["c", "m", "r"]
+        - key: "karpenter.k8s.aws/instance-family"
+          operator: In
+          values: ["m5", "m5d", "c5", "c5d", "c4", "r4"]
+          minValues: 5
         - key: kubernetes.io/arch
           operator: In
           values: ["amd64"]
